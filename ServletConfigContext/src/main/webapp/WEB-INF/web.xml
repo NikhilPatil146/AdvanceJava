@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>ServletConfigContext</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+   <listener>
+    <listener-class>com.listener.MyListener</listener-class>
+  </listener>
+  <context-param>
+    <param-name>driver</param-name>
+    <param-value>com.mysql.jdbc.Driver </param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.servlet.MyServlet</servlet-class>
+    <init-param>
+      <param-name>email</param-name>
+      <param-value>nikhil1@gmail.com</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/com.servlet.MyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListenerDemo</display-name>
+    <servlet-name>ListenerDemo</servlet-name>
+    <servlet-class>com.servlet.ListenerDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListenerDemo</servlet-name>
+    <url-pattern>/com.servlet.ListenerDemo</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>
